@@ -7,7 +7,7 @@ def test_hash_password():
 
 def test_verify_password():
     password = "abc"
-    password1 = "bcd"
+    wrong_password = "bcd"
     hashed_password = hash_password(password)
     assert verify_password(password, hashed_password)
-    assert not verify_password(password1, hashed_password)
+    assert not verify_password(wrong_password, hashed_password)
